@@ -1,0 +1,12 @@
+alerts:
+  js:
+    js/sitewide_alerts.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.cookie
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+  css:
+    theme:
+      css/sitewide_alerts.css: {}

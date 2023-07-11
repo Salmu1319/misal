@@ -1,0 +1,19 @@
+sitewide_alerts.config_form:
+  path: '/admin/config/sitewide-alerts'
+  defaults:
+    _form: '\Drupal\sitewide_alerts\Form\SiteWideAlertSettingsForm'
+    _title: 'Site-wide Alert Settings'
+  requirements:
+    _permission: 'administer sitewide_alerts'
+  options:
+    _admin_route: TRUE
+
+sitewide_alerts.alert_config_form:
+  path: '/admin/config/sitewide-alerts/alert'
+  defaults:
+    _form: '\Drupal\sitewide_alerts\Form\SiteWideAlertConfigForm'
+    _title: 'Manage Site-wide Alert(s)'
+  requirements:
+    _permission: 'administer sitewide_alerts'
+  options:
+    _admin_route: TRUE

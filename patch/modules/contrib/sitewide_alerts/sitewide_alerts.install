@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Implements hook_install().
+ *
+ * @see hook_install()
+ */
+function sitewide_alerts_install() {
+}

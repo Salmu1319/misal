@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Site alert
+ *
+ * Variables:
+ * - alert: Alert array
+ */
+#}
+{% if alert and alert.message %}
+    <div class="c-site-alert {{ alert.type }} {{ alert.position }}" role="alert"
+         data-dismiss-key="{{ alert.dismiss_key }}">
+        <div class="c-site-alert__container">
+            {% if alert.dismiss and alert.dismiss_title %}
+                <button type="button" class="c-site-alert__close" data-dismiss="alert"
+                        aria-label="{{ 'Close alert'|t }}">{{ alert.dismiss_title|t }}</button>
+            {% endif %}
+            {% if alert.title %}
+                <div class="c-site-alert__title">
+                    {{ alert.title }}
+                </div>
+            {% endif %}
+            {% if alert.message %}
+                <div class="c-site-alert__message">
+                    {{ alert.message.value|raw }}
+                </div>
+            {% endif %}
+            {% if alert.link and alert.link_title %}
+                <a href="{{ alert.link }}" class="c-site-alert__link"{% if alert.link_type and alert.link_type == 'external' %} target="_blank"{% endif %}>{{ alert.link_title }}</a>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}

@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Site alerts
+ *
+ * Variables:
+ * - alerts: Alerts array
+ */
+#}
+<div class="c-site-alerts">
+    {% for alert_pos,alert in alerts %}
+        {{ alert }}
+    {% endfor %}
+</div>

@@ -1,0 +1,17 @@
+sitewide_alerts.config:
+  title: 'Site-wide Alerts'
+  route_name: sitewide_alerts.config_form
+  description: 'Site-wide alerts settings'
+  parent: system.admin_config
+
+sitewide_alerts.settings:
+  title: 'Settings'
+  route_name: sitewide_alerts.config_form
+  description: 'Manage site-wide alerts settings'
+  parent: sitewide_alerts.config
+
+sitewide_alerts.alert_settings:
+  title: 'Manage Site-wide Alert(s)'
+  route_name: sitewide_alerts.alert_config_form
+  description: 'Manage site-wide alert(s)'
+  parent: sitewide_alerts.config

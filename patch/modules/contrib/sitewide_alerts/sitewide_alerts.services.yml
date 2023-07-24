@@ -1,7 +1,0 @@
-services:
-  cache.sitewide_alerts:
-    class: Drupal\Core\Cache\CacheBackendInterface
-    tags:
-      - { name: cache.bin }
-    factory: cache_factory:get
-    arguments: [ sitewide_alerts ]

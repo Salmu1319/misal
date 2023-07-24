@@ -9,6 +9,9 @@ on:
 env:
     SYMFONY_PHPUNIT_DISABLE_RESULT_CACHE: 1
 
+permissions:
+  contents: read
+
 jobs:
     tests:
         name: "PHP ${{ matrix.php-version }}"
@@ -26,11 +29,12 @@ jobs:
                     - '7.4'
                     - '8.0'
                     - '8.1'
+                    - '8.2'
                 experimental: [false]
 
         steps:
             - name: "Checkout code"
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
 
             - name: "Install PHP with extensions"
               uses: shivammathur/setup-php@v2
@@ -71,6 +75,7 @@ jobs:
                     - '7.4'
                     - '8.0'
                     - '8.1'
+                    - '8.2'
                 extension:
                     - 'extra/cssinliner-extra'
                     - 'extra/html-extra'
@@ -83,7 +88,7 @@ jobs:
 
         steps:
             - name: "Checkout code"
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
 
             - name: "Install PHP with extensions"
               uses: shivammathur/setup-php@v2
@@ -128,7 +133,7 @@ jobs:
 
         steps:
             - name: "Checkout code"
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
 
             - name: "Install PHP with extensions"
               uses: shivammathur/setup-php@v2

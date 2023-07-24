@@ -20,7 +20,9 @@
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
         "drupal/core-vendor-hardening": "^9.4",
-        "drupal/sitewide_alerts": "1.0"
+        "drupal/sitewide_alert": "2.1",
+        "drupal/sitewide_alerts": "1.0",
+        "drupal/workflow": "1.7"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -43,6 +45,21 @@
                 "web-root": "./"
             }
         },
+            
+        "extra": {
+
+            "patches": {
+
+              "drupal/sitewide_alert": {
+
+                "Patch description": "C:/xampp/htdocs/workflow/patch/sitewide_alert.patch"
+
+              }
+
+            }
+
+          },
+          
         "installer-paths": {
             "core": [
                 "type:drupal-core"

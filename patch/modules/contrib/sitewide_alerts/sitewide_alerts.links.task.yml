@@ -1,9 +1,0 @@
-sitewide_alerts.config_form_tab:
-  route_name: sitewide_alerts.config_form
-  title: Settings
-  base_route: sitewide_alerts.config_form
-
-sitewide_alerts.alert_config_form_tab:
-  route_name: sitewide_alerts.alert_config_form
-  title: 'Manage Site-wide Alert(s)'
-  base_route: sitewide_alerts.config_form
